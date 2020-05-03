@@ -4,7 +4,9 @@
     font-family: "Montserrat", sans-serif;
     scroll-behavior: smooth;
   }
-  
+  html{
+    height: 100vh;
+  }
   body {
     margin: 0;
     padding: 0;
@@ -48,6 +50,7 @@
     position: relative;
     overflow: hidden;
   }
+
   .header-welcome-text {
     position: absolute;
     left: 50%;
