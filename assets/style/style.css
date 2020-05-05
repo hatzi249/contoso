@@ -556,6 +556,7 @@
     footer {
       width: 100%;
       bottom: 0;
+      background-color: black;
     }
     .footer-column p {
       padding: 6px;
