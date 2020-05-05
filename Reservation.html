@@ -9,10 +9,15 @@
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <script src="https://kit.fontawesome.com/77f9a0ac97.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<style>
+  .select{
+ margin:0 10px;
+ padding: 8px;
+  }
+</style>
   </head>
   <body>
    
@@ -40,52 +45,46 @@
       <br>
       <br>
 
-      <div id="form" class="d-flex justify-content-center" >
-        <form>
+        <form class="cf">
           <h4 style="text-align: center; ">Book a Table</h4>
-          <div class="d-flex justify-content-center" >
-              <div style="padding: 15px; ">
+          <div style="display:flex; justify-content:center;" >
+              <div style="padding: 15px; display:flex; justify-content:center; ">
                 
-              <select class=" btn btn-outline-dark btn-sm dropdown-toggle">
+              <select class="select">
                 <option selected>Number of Persons</option>
                 <option value="persons">1</option>
                 <option value="persons">2</option>
                 <option value="persons">3</option>
                 <option value="persons">4</option>
+             
               </select>
-            </div>
-            <div   style="padding: 15px; ">
-              <input class="btn btn-outline-dark btn-sm"  type="date">
+           
+            <div>
+              <input class="select"  type="date">
           </div>
-            <div style="padding: 15px;">
-              <input class="btn btn-outline-dark btn-sm"  type="time" name="" id="">
-                
+            <div>
+              <input class="select"  type="time" name="" id="">
+            </div> 
               </div>
         </div>
-            <div class="form-row">
-              <div class="form-group col-md-6 col-sm-4">
-                <label for="first-name" style="font-size: 15px;">First Name</label>
-                <input type="first-name" class="form-control btn-outline-dark btn-sm" id="first-name">
-              </div>
-              <div class="form-group col-md-6 col-sm-4">
-                <label for="last-name" style="font-size: 15px;">Last Name</label>
-                <input type="last-name" class="form-control btn-outline-dark btn-sm" id="last-name">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email" style="font-size: 15px;">Email</label>
-              <input type="email" class="form-control btn-outline-dark btn-sm" id="email" >
-            </div>
-            <div class="form-group">
-              <label for="mobile-number" style="font-size: 15px;">Phone Number</label>
-              <input type="tel" class="form-control btn-outline-dark btn-sm " id="inputAddress2">
-            </div>
            
-            
-            <button type="button" class="btn btn-secondary btn-lg btn-block ">Complete Your Booking</button>
+              
+           
+          
+              <div class="half left cf">
+                <input type="text" id="input-name" placeholder="Name">
+                <input type="email" id="input-email" placeholder="Email address">
+                <input type="tel" id="input-subject" placeholder="Phone number">
+              </div>
+              <div class="half right cf">
+                <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+              </div>  
+              <input type="submit" value="Complete Your Booking" id="input-submit">
+         
+
         
           </form>
-        </div>
+        
         <br>
         <br>
         <br>      

@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/77f9a0ac97.js" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -31,9 +31,9 @@ body{
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    grid-template-rows: 1fr;
-    justify-content: center;
-    width: 100%;
+    justify-content: center; 
+    width: auto;
+    margin: 0 150px;
     
 }
     
@@ -44,7 +44,7 @@ body{
 }
 .zone img{
     width:100%;
-    align-self:center ;
+    align-items:center ;
 
 }
 .HeaderA,.HeaderB{
@@ -53,7 +53,7 @@ body{
         height: 20px;
         text-align: center;
         margin: 10px auto;
-        font-size: 20px;
+        font-size: 18px;
     }
     
 
@@ -61,7 +61,7 @@ body{
  display: flex;
  flex-direction: column;
  font-weight: bold;
- font-size: 10px;
+ font-size: 15px;
  margin: 1% 40% ;
  place-content: center center;
 
@@ -77,8 +77,10 @@ border-radius: 10px;
 .buy{
  width : 80px;
  height: 40px;
- 
+ font-size: 15px;
  border-radius: 10px;
+ color:white;
+ background-color: black;
 
 }
 @media only screen and (max-width:700px){
@@ -94,7 +96,7 @@ border-radius: 10px;
   width: 250px;
  }
  .address{
-     margin-left: 20%;
+     margin-left: 25%;
  }
 }
     </style>
@@ -133,7 +135,7 @@ border-radius: 10px;
 <div class="zone"><a href="#"><img src="assets/img/vege.jpg" alt=""></a></div>
 <div class="zone"><a href="#"><img src="assets/img/steak.jpg" alt=""></a></div>
 </div>
-<hr>
+
 <h6 class="HeaderB">Address</h6>
 
 
@@ -177,7 +179,7 @@ border-radius: 10px;
 
   </footer>
 
-   <script>
+<!--    <script>
        fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
   .then((response) => {
     return response.json();
@@ -185,7 +187,8 @@ border-radius: 10px;
   .then((data) => {
     console.log(data);
   });
-   </script>
-    
+</script> -->
+<script src="assets/javascript/javascript.js"></script>
+  <script src="https://kit.fontawesome.com/77f9a0ac97.js" crossorigin="anonymous"></script>
 </body>
 </html>
