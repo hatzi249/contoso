@@ -90,6 +90,115 @@
     font-size: 36px;
   }
 
+
+
+/* SLIDER FOOD CATEGORY*/
+  .slide-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+}
+
+.slide-container::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.slide-container::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+.slide-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.slide-container:active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  }
+
+.card-holder {
+    display: inline-flex;
+}
+
+.card {
+    background-color: #FFFFFF;
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.image-holder {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -55%);
+    -ms-transform: translate(-50%, -55%);
+    transform: translate(-50%, -55%);
+}
+
+.image-holder img {
+    height: 200px;
+}
+
+.card-text {
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.card-paragraph {
+    color: white;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.card-title {
+    background-color: #000000;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card-titleHead {
+    color: #FFFFFF;
+    font-size: 24px;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.overlay {
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    border-radius: 10px;
+    transition: 1.1s ease;
+}
+
+.card:hover .overlay {
+    height: 100%;
+}
+
+
   .categories {
     display: flex;
     flex-wrap: wrap;
