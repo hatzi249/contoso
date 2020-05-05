@@ -69,7 +69,8 @@
   .reservation-button {
     font-size: 20px;
     border: none;
-    background-color: white;
+    background-color: black;
+    color:white;
     border-radius: 10px;
     font-weight: 700;
     margin: 20px;
@@ -245,10 +246,17 @@
     font-size: 20px;
     border: none;
     border-bottom: 1px solid #ccc;
+    
   }
   
   .search-categories:focus {
     width: 70%;
+  }
+  #myButton{
+    background-color: black;
+    color: white;
+    padding: 10PX;
+    border-radius: 10PX;
   }
   
   .about-container {
