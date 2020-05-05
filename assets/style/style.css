@@ -11,7 +11,24 @@
     margin: 0;
     padding: 0;
   }
-  
+  /* btnScrollToTop */
+  .btnScrollToTop{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black ;
+    color: white;
+    box-shadow: 0 0 10x rgba(0,0,0,25) ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    }
+    .btnScrollToTop:active{
+      background-color:gray;
+    }
   nav {
     background-color: black;
   }
@@ -75,10 +92,20 @@
     font-weight: 700;
     margin: 20px;
     padding: 6px 20px;
+    box-shadow: 0 0 10x rgba(0,0,0,25) ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+   
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+   
+  }
+  .reservation-button:active{
+    background-color:gray;
   }
   #main-container {
     width: 80%;
@@ -255,9 +282,17 @@
   #myButton{
     background-color: black;
     color: white;
-    padding: 10PX;
+    padding: 15PX;
     border-radius: 10PX;
-  }
+    box-shadow: 0 0 10x rgba(0,0,0,25) ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    }
+    #myButton:active{
+      background-color:gray;
+    }
+  
   
   .about-container {
     position: relative;
@@ -331,7 +366,16 @@
     padding: 1em;
     margin-top: 1em;
     width: 100%;
-  }
+    box-shadow: 0 0 10x rgba(0,0,0,25) ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+   
+    }
+    #input-submit:active{
+      background-color:gray;
+    }
+  
   
   textarea {
     height: 126px;
@@ -364,6 +408,24 @@
       margin-bottom: 0;
     }
   }
+  /* book a table */
+  .select {
+    border-radius: 15px;
+    text-decoration: none; 
+     outline: none;
+    cursor: pointer;
+    }
+  .table-btn{
+    box-shadow: 0 0 10x rgba(0,0,0,25) ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+   
+    }
+    .table-btn:active{
+      background-color:gray;
+    }
+  }
   
   /* Clearfix */
   .cf:before,
@@ -377,8 +439,7 @@
   }
   .cf{
     width: 95%;
-    
-  }
+   }
   
   /*Footer*/
   footer {

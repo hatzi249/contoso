@@ -7,7 +7,18 @@ function myFunction() {
       x.className = "topnav";
     }
   }
+/*  btnScrollToTop*/
   
+const btnScrollToTop = document.querySelector(".btnScrollToTop");
+btnScrollToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth"
+  });
+});
+
+
   /*Maps*/
   function initMap() {
     var uluru = { lat: 59.31135, lng: 18.07483 };
@@ -79,7 +90,7 @@ const div = document.getElementById("beef");
       }); 
   }
   catch (err) {
-      div.innerHTML = `Couldn´t reach the API.`
+      div.innerHTML = `Food on the way.....`
       console.log("getCustomers: ERROR", err);
   }
 }
@@ -116,7 +127,7 @@ get.onclick = async () => {
       }); 
   }
   catch (err) {
-      dish.innerHTML = `Couldn´t reach the API.`
+      dish.innerHTML = `Menu on the way.....!!!!!!`
       console.log("getCustomers: ERROR", err);
   }
 }
