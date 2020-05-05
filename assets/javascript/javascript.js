@@ -18,7 +18,40 @@ function myFunction() {
     var marker = new google.maps.Marker({ position: uluru, map: map });
   }
 
+
+
 /*Categories*/
+
+const apiUrl = 'https://www.themealdb.com/api/json/v1/1/categories.php';
+async function getCategory() {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    const { categories } = data; 
+
+    for (let i = 0; i < categories.length; i++) {
+        const category = categories[i];
+        const cardHolder = document.getElementById("cardHolder")
+        cardHolder.innerHTML += 
+            `<div class="card">
+                <div class="image-holder">
+                    <img src="${categories[i].strCategoryThumb}" alt="">
+                </div>
+                <div class="overlay">
+                    <div class="card-text">
+                        <p class="card-paragraph"> ${categories[i].strCategoryDescription} </p>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <h3 class="card-titleHead"> ${categories[i].strCategory} </h3>
+                </div>
+            </div>`
+        ;
+    }
+}
+getCategory();
+
+
+
 
 const div = document.getElementById("beef");
 
