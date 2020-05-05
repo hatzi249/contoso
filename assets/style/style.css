@@ -213,6 +213,7 @@
     transition: all 0.3s ease-in-out;
     border: 1px solid rgb(231, 231, 231);
     overflow: auto;
+    scrollbar-width: none;
   }
   .card-categories::-webkit-scrollbar {
     display: none;
