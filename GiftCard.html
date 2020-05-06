@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Gift Card</title>
     <link rel="stylesheet" href="./assets/style/style.css" />
@@ -10,208 +10,215 @@
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
     />
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
     <style>
-        *{
-    box-sizing: border-box;
-    padding: 0%;
-    margin: 0%;
-    user-select: none;
-}
+      * {
+        box-sizing: border-box;
+        padding: 0%;
+        margin: 0%;
+        user-select: none;
+      }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0 auto;
-    
-}
-.container{
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-    width: auto;
-    margin: 0 200px;
-    justify-content: center; 
-    
-}
-    
-.zone{
-    cursor: pointer;
-    border-style: solid;
-    border-color: black;
-    margin-right: 0px;
-}
-.zone:focus{
-  border-color: gray;
-}
-.zone img{
-    width:100%;
-    justify-items:center ;
-    
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 auto;
+      }
+      .container {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        width: auto;
+        margin: 0 200px;
+        justify-content: center;
+      }
 
-}
-.HeaderA,.HeaderB{
-   
+      .zone {
+        cursor: pointer;
+        border-style: solid;
+        border-color: black;
+        margin-right: 0px;
+      }
+      .zone:focus {
+        border-color: gray;
+      }
+      .zone img {
+        width: 100%;
+        justify-items: center;
+      }
+      .HeaderA,
+      .HeaderB {
         width: 101px;
         height: 20px;
         text-align: center;
         margin: 10px auto;
         font-size: 18px;
-    }
-    
+      }
 
-.address{
- display: flex;
- flex-direction: column;
- font-weight: bold;
- font-size: 15px;
- margin: 1% 40% ;
- place-content: center center;
+      .address {
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        font-size: 15px;
+        margin: 1% 40%;
+        place-content: center center;
+      }
 
-}
+      .address input {
+        width: 300px;
+        height: 30px;
+        border-radius: 10px;
+      }
+      .buy {
+        width: 80px;
+        height: 40px;
+        font-size: 15px;
+        border-radius: 10px;
+        color: white;
+        background-color: black;
+        box-shadow: 0 0 10x rgba(0, 0, 0, 25);
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
 
+      .buy:active {
+        background-color: gray;
+      }
 
-.address input{
-width: 300px;
-height: 30px;
-border-radius: 10px;
-
-}
-.buy{
- width : 80px;
- height: 40px;
- font-size: 15px;
- border-radius: 10px;
- color:white;
- background-color: black;
- box-shadow: 0 0 10x rgba(0,0,0,25) ;
-  border: none;
-  outline: none;
-  cursor: pointer;
-   
-    }
-
-    .buy:active{
-      background-color:gray;
-    }
-
-
-@media only screen and (max-width:700px){
-  .container{
-    margin:  0px;
-    justify-content: center; 
-    
-  }
- .address input{
-  width: 300px;
- }
- .address{
-     margin-left: 20%;
- }
-}
-@media only screen and (max-width:500px){
-  .container{
-    margin: 0 auto;
-    justify-content: center; 
-    margin: 0 2px;
-    
-  }
- .address input{
-  width: 200px;
- }
- .address{
-     margin-left: 0px auto;
- }
-}
+      @media only screen and (max-width: 700px) {
+        .container {
+          margin: 0px;
+          justify-content: center;
+        }
+        .address input {
+          width: 300px;
+        }
+        .address {
+          margin-left: 20%;
+        }
+      }
+      @media only screen and (max-width: 500px) {
+        .container {
+          margin: 0 auto;
+          justify-content: center;
+          margin: 0 2px;
+        }
+        .address input {
+          width: 200px;
+        }
+        .address {
+          margin-left: 0px auto;
+        }
+      }
     </style>
-
-</head>
-<body>
-  <button class="btnScrollToTop">
-    <i class="material-icons">
-      arrow_upward
+  </head>
+  <body>
+    <button class="btnScrollToTop">
+      <i class="material-icons">
+        arrow_upward
       </i>
-  </button>
-  <header>
-    <nav>
-      <div class="nav-container">
-       
-        <ul class="topnav" id="myTopnav">
-          <a class="logo-text" href="index.html">Contoso</a>
-          <a href="index.html">Menu</a>
-          <a href="index.html">About Us</a>
-          <a href="index.html">Contact</a>
-          <a href="GiftCard.html">Gift Card</a>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
-        </ul>
-      </div>
-    </nav>
-  
-  </header>
+    </button>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <ul class="topnav" id="myTopnav">
+            <a class="logo-text" href="index.html">Contoso</a>
+            <a href="index.html">Menu</a>
+            <a href="index.html">About Us</a>
+            <a href="index.html">Contact</a>
+            <a href="GiftCard.html">Gift Card</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <h6 class="HeaderA">Select card</h6>
-    <br>
-    <br>
-<div class="container">
-
-<div class="zone"><a href="#"><img src="assets/img/download.jfif" alt=""></a></div>
-<div class="zone"><a href="#"><img src="assets/img/dessert.jpg" alt=""></a></div>
-<div class="zone"><a href="#"><img src="assets/img/chicken.jpg" alt=""></a></div>
-<div class="zone"><a href="#"><img src="assets/img/dessert.jpg" alt=""></a></div>
-<div class="zone"><a href="#"><img src="assets/img/dessert.jpg" alt=""></a></div>
-<div class="zone"><a href="#"><img src="assets/img/steak.jpg" alt=""></a></div>
-<div class="zone"><a href="#"><img src="assets/img/vege.jpg" alt=""></a></div>
-<div class="zone"><a href="#"><img src="assets/img/steak.jpg" alt=""></a></div>
-</div>
-
-<h6 class="HeaderB">Address</h6>
-
-
-<Div class="address">
-    
-    <label for="first-name">First Name:</label>
-    <input type="text"><br>
-    <label for="">Last Name:</label>
-    <input type="text"><br>
-    <label for="">Email:</label>
-    <input type="text"><br>
-    <label for="">Phone number:</label>
-    <input type="text"><br>
-    <label for="">Credit Card number:</label>
-    <input type="text"><br>
-    <button class="buy">Buy</button>
-   </Div>
- 
-   <footer class="main-footer">
-    <section class="footer-columns">
-  
-      <div class="footer-column">   
-        <p><i class="fab fa-instagram"></i><a href="https://www.instagram.com/" target="_blank">Instagram</a></p>
-        <p><i class="fab fa-facebook"></i><a href="https://www.facebook.com/" target="_blank">Facebook</a></p>
-        <p><i class="fab fa-twitter"></i><a href="https://twitter.com/" target="_blank">Twitter</a></p>
+    <br />
+    <br />
+    <div class="container">
+      <div class="zone">
+        <a href="#"><img src="assets/img/download.jfif" alt="" /></a>
       </div>
-      
-      
-      
-      <div class="footer-column">
-        <p>FOLKUNGAGATAN 110, 116 30 STOCKHOLM</p>
-        <p>08-123 34 45 </p>
-        <p>Info@contoso.com</p>
+      <div class="zone">
+        <a href="#"><img src="assets/img/dessert.jpg" alt="" /></a>
       </div>
-      
-    </section>
+      <div class="zone">
+        <a href="#"><img src="assets/img/chicken.jpg" alt="" /></a>
+      </div>
+      <div class="zone">
+        <a href="#"><img src="assets/img/dessert.jpg" alt="" /></a>
+      </div>
+      <div class="zone">
+        <a href="#"><img src="assets/img/dessert.jpg" alt="" /></a>
+      </div>
+      <div class="zone">
+        <a href="#"><img src="assets/img/steak.jpg" alt="" /></a>
+      </div>
+      <div class="zone">
+        <a href="#"><img src="assets/img/vege.jpg" alt="" /></a>
+      </div>
+      <div class="zone">
+        <a href="#"><img src="assets/img/steak.jpg" alt="" /></a>
+      </div>
+    </div>
 
-    <section class="last-footer-section" >
-      <p>Contoso © All Rights Reserved | Liaone tieto</p>
-    </section>
+    <h6 class="HeaderB">Address</h6>
 
-  </footer>
+    <div class="address">
+      <label for="first-name">First Name:</label>
+      <input type="text" /><br />
+      <label for="">Last Name:</label>
+      <input type="text" /><br />
+      <label for="">Email:</label>
+      <input type="text" /><br />
+      <label for="">Phone number:</label>
+      <input type="text" /><br />
+      <label for="">Credit Card number:</label>
+      <input type="text" /><br />
+      <button class="buy">Buy</button>
+    </div>
 
-<!--    <script>
+    <footer class="main-footer">
+      <section class="footer-columns">
+        <div class="footer-column">
+          <p>
+            <i class="fab fa-instagram"></i
+            ><a href="https://www.instagram.com/" target="_blank">Instagram</a>
+          </p>
+          <p>
+            <i class="fab fa-facebook"></i
+            ><a href="https://www.facebook.com/" target="_blank">Facebook</a>
+          </p>
+          <p>
+            <i class="fab fa-twitter"></i
+            ><a href="https://twitter.com/" target="_blank">Twitter</a>
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <p>FOLKUNGAGATAN 110, 116 30 STOCKHOLM</p>
+          <p>08-123 34 45</p>
+          <p>Info@contoso.com</p>
+        </div>
+      </section>
+
+      <section class="last-footer-section">
+        <p>Contoso © All Rights Reserved | Liaone tieto</p>
+      </section>
+    </footer>
+
+    <!--    <script>
        fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
   .then((response) => {
     return response.json();
@@ -220,7 +227,10 @@ border-radius: 10px;
     console.log(data);
   });
 </script> -->
-<script src="assets/javascript/javascript.js"></script>
-  <script src="https://kit.fontawesome.com/77f9a0ac97.js" crossorigin="anonymous"></script>
-</body>
+    <script src="assets/javascript/javascript.js"></script>
+    <script
+      src="https://kit.fontawesome.com/77f9a0ac97.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
