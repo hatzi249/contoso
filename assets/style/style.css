@@ -436,7 +436,7 @@ textarea {
 
 /* book a table */
 .select {
-  margin:0 10px;
+  margin: 0 10px;
   padding: 8px;
   border-radius: 10px;
   text-decoration: none;
@@ -800,6 +800,7 @@ footer {
     font-family: "Merriweather", sans-serif;
     border: 1px solid #ccc;
   }
+
   textarea {
     height: 126px;
     border: 1px solid #ccc;
@@ -809,6 +810,6 @@ footer {
     right: 0;
     width: 100%;
   }
-  
+
 
 }
