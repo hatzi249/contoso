@@ -1,27 +1,27 @@
 /*HamburgerNav*/
 function myFunction() {
-  var x = document.getElementById('myTopnav');
-  if (x.className === 'topnav') {
-    x.className += ' responsive';
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
   } else {
-    x.className = 'topnav';
+    x.className = "topnav";
   }
 }
 /*  btnScrollToTop*/
 
-const btnScrollToTop = document.querySelector('.btnScrollToTop');
-btnScrollToTop.addEventListener('click', () => {
+const btnScrollToTop = document.querySelector(".btnScrollToTop");
+btnScrollToTop.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     left: 0,
-    behavior: 'smooth',
+    behavior: "smooth",
   });
 });
 
 /*Maps*/
 function initMap() {
   var uluru = { lat: 59.31135, lng: 18.07483 };
-  var map = new google.maps.Map(document.getElementById('map'), {
+  var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 13,
     center: uluru,
   });
@@ -30,41 +30,40 @@ function initMap() {
 
 /*Categories*/
 
-const apiUrl = 'https://www.themealdb.com/api/json/v1/1/categories.php';
+const apiUrl = "https://www.themealdb.com/api/json/v1/1/categories.php";
 async function getCategory() {
   const response = await fetch(apiUrl);
   const data = await response.json();
   const { categories } = data;
 
-  for (let i = 0; i < categories.length; i++) {
-    const category = categories[i];
-    const cardHolder = document.getElementById('cardHolder');
+  categories.forEach((category) => {
+    const cardHolder = document.getElementById("cardHolder");
     cardHolder.innerHTML += `<div class="card">
                 <div class="image-holder">
-                    <img src="${categories[i].strCategoryThumb}" alt="">
+                    <img src="${category.strCategoryThumb}" alt="">
                 </div>
                 <div class="overlay">
                     <div class="card-text">
-                        <p class="card-paragraph"> ${categories[i].strCategoryDescription} </p>
+                        <p class="card-paragraph"> ${category.strCategoryDescription} </p>
                     </div>
                 </div>
                 <div class="card-title">
-                    <h3 class="card-titleHead"> ${categories[i].strCategory} </h3>
+                    <h3 class="card-titleHead"> ${category.strCategory} </h3>
                 </div>
             </div>`;
-  }
+  });
 }
 getCategory();
 
-const div = document.getElementById('beef');
+const div = document.getElementById("beef");
 
 getMenu = async () => {
   try {
     const result = axios.get(
-      'https://www.themealdb.com/api/json/v1/1/categories.php'
+      "https://www.themealdb.com/api/json/v1/1/categories.php"
     );
     const { data: categories } = await result;
-    div.innerHTML = '';
+    div.innerHTML = "";
     categories.categories.forEach((category) => {
       div.innerHTML += `
             
@@ -83,40 +82,58 @@ getMenu = async () => {
     });
   } catch (err) {
     div.innerHTML = `Food on the way.....`;
-    console.log('getCustomers: ERROR', err);
+    console.log("getCustomers: ERROR", err);
   }
 };
 getMenu();
 
 /*Search*/
 
-let dish = document.getElementById('dishName');
-let get = document.getElementById('myButton');
+let dish = document.getElementById("dishName");
+let get = document.getElementById("myButton");
 
 get.onclick = async () => {
   try {
-    let input = document.getElementById('myInput').value;
+    let input = document.getElementById("myInput").value;
     const result = axios.get(
       `https://www.themealdb.com/api/json/v1/1/search.php?f=${input}`
     );
     const { data: meals } = await result;
-    dish.innerHTML = '';
+    dish.innerHTML = "";
     meals.meals.forEach((meal) => {
+      console.log(meal);
       dish.innerHTML += `
           <div class="card-categories">
+          <div class="tooltip">
           <img
-            class="image-categories"
-            src="${meal.strMealThumb}"
-            style="width: 100%;"
-          />
-          <div class="card-text-container">
-              <h3>${meal.strMeal}</h3>
-              <p>${meal.strInstructions}</p>
-          </div>
-        `;
+          class="image-categories"
+          src="${meal.strMealThumb}"
+          style="width: 100%;"
+        />
+          <span class="tooltiptext">
+          Ingredients:<br>
+          "${meal.strIngredient1}"
+          "${meal.strIngredient2}"
+          "${meal.strIngredient3}"
+          "${meal.strIngredient4}"
+          "${meal.strIngredient5}"
+          "${meal.strIngredient6}"
+          "${meal.strIngredient7}"
+          "${meal.strIngredient8}"
+          "${meal.strIngredient9}"
+       </span>
+        </div>
+        <div class="card-text-container">
+        <h3>${meal.strMeal}</h3>
+        <p>${meal.strTags}</p>
+        <a href="${meal.strYoutube}" target="_blank"><button type="button" id="myButton" >YouTube</button></a>
+        
+      
+    </div>
+        </div> `;
     });
   } catch (err) {
     dish.innerHTML = `Menu on the way.....!!!!!!`;
-    console.log('getCustomers: ERROR', err);
+    console.log("getCustomers: ERROR", err);
   }
 };

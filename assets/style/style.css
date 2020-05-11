@@ -102,12 +102,10 @@ nav {
   outline: none;
   cursor: pointer;
 
-
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-
 }
 
 .reservation-button:active {
@@ -125,8 +123,6 @@ nav {
   padding: 40px;
   font-size: 36px;
 }
-
-
 
 /* SLIDER FOOD CATEGORY*/
 .slide-container {
@@ -162,7 +158,7 @@ nav {
 }
 
 .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   position: relative;
   width: 350px;
   height: 350px;
@@ -195,7 +191,6 @@ nav {
   transform: translate(-50%, -50%);
 }
 
-
 .card-paragraph {
   color: white;
   font-size: 14px;
@@ -214,7 +209,7 @@ nav {
 }
 
 .card-titleHead {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 24px;
   text-align: center;
   margin: 20px 0px;
@@ -233,11 +228,9 @@ nav {
   transition: 1.1s ease;
 }
 
-
 .card:hover .overlay {
   height: 100%;
 }
-
 
 .categories {
   display: flex;
@@ -249,10 +242,10 @@ nav {
   border-radius: 8px;
   background-color: white;
   margin: 5px;
-  width: 280px;
-  height: 400px;
+  width: 240px;
+  height: 360px;
   transition: all 0.3s ease-in-out;
-  border: 1px solid rgb(231, 231, 231);
+ /*  border: 1px solid rgb(231, 231, 231); */
   overflow: auto;
   scrollbar-width: none;
 }
@@ -261,9 +254,9 @@ nav {
   display: none;
 }
 
-.card-categories:hover {
+/* .card-categories:hover {
   transform: scale(1.1, 1.1);
-}
+} */
 
 .card-categories img {
   border-top-right-radius: 7px;
@@ -272,11 +265,41 @@ nav {
 }
 
 .card-text-container {
-  font-size: 18px;
+  font-size: 0.7rem;
   text-align: center;
   padding: 8px;
+ 
+}
+.card-text-container > p {
+  margin: 7px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+ 
 }
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  font-size: 0.6rem;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 .input-categories {
   margin: 80px;
   display: flex;
@@ -289,20 +312,20 @@ nav {
   transition: width 0.35s ease-in-out;
   font-size: 20px;
   border: none;
-  border-bottom: 1px solid #ccc;
-
+  border-bottom: 1px solid black;
 }
 
 .search-categories:focus {
   width: 70%;
+  outline: none;
 }
 
 #myButton {
   background-color: black;
   color: white;
-  padding: 15PX;
+  padding: 15px;
   margin-left: 15px;
-  border-radius: 10PX;
+  border-radius: 10px;
   box-shadow: 0 0 10x rgba(0, 0, 0, 25);
   border: none;
   outline: none;
@@ -312,7 +335,6 @@ nav {
 #myButton:active {
   background-color: gray;
 }
-
 
 .about-container {
   position: relative;
@@ -396,13 +418,11 @@ form {
   border: none;
   outline: none;
   cursor: pointer;
-
 }
 
 #input-submit:active {
   background-color: gray;
 }
-
 
 textarea {
   height: 126px;
@@ -452,13 +472,11 @@ textarea {
   outline: none;
   cursor: pointer;
   width: 90px;
-
 }
 
 .table-btn:active {
   background-color: rgb(8, 8, 8);
 }
-
 
 /* Clearfix */
 .cf:before,
@@ -565,12 +583,10 @@ footer {
     outline: none;
     cursor: pointer;
 
-
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-
   }
 
   .reservation-button:active {
@@ -766,19 +782,15 @@ footer {
 }
 
 /* bookk a table */
-@media only screen and (max-width:700px) {
+@media only screen and (max-width: 700px) {
   .select {
-
     margin: 0 2px;
     padding: 9px 1px;
     font-size: 15px;
   }
-
-
-
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width: 500px) {
   .table {
     padding: 0px;
   }
@@ -812,6 +824,4 @@ footer {
     right: 0;
     width: 100%;
   }
-
-
 }
