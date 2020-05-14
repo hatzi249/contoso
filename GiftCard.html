@@ -122,11 +122,7 @@
     </style>
   </head>
   <body>
-    <button class="btnScrollToTop">
-      <i class="material-icons">
-        arrow_upward
-      </i>
-    </button>
+
     <header>
       <nav>
         <div class="nav-container">
@@ -143,6 +139,7 @@
         </div>
       </nav>
     </header>
+
     <h6 class="HeaderA">Select card</h6>
     <br />
     <br />
@@ -150,32 +147,18 @@
       <div class="zone">
         <a href="#"><img src="assets/img/download.jfif" alt="" /></a>
       </div>
-      <div class="zone">
-        <a href="#"><img src="assets/img/dessert.jpg" alt="" /></a>
-      </div>
-      <div class="zone">
-        <a href="#"><img src="assets/img/chicken.jpg" alt="" /></a>
-      </div>
-      <div class="zone">
-        <a href="#"><img src="assets/img/dessert.jpg" alt="" /></a>
-      </div>
-      <div class="zone">
-        <a href="#"><img src="assets/img/dessert.jpg" alt="" /></a>
-      </div>
-      <div class="zone">
-        <a href="#"><img src="assets/img/steak.jpg" alt="" /></a>
-      </div>
-      <div class="zone">
-        <a href="#"><img src="assets/img/vege.jpg" alt="" /></a>
-      </div>
-      <div class="zone">
-        <a href="#"><img src="assets/img/steak.jpg" alt="" /></a>
-      </div>
     </div>
 
-    <h6 class="HeaderB">Address</h6>
-
     <div class="address">
+      <label for="price">Select price:</label>
+      <select class="select">
+        <option selected>Select price</option>
+        <option value="persons">250 kr</option>
+        <option value="persons">500 kr</option>
+        <option value="persons">1000 kr</option>
+        <option value="persons">2000 kr</option>
+        <option value="persons">5000 kr</option>
+      </select><br />
       <label for="first-name">First Name:</label>
       <input type="text" /><br />
       <label for="">Last Name:</label>
@@ -186,9 +169,12 @@
       <input type="text" /><br />
       <label for="">Credit Card number:</label>
       <input type="text" /><br />
-      <button class="buy">Buy</button>
+      <button class="buy" id="buyButton">Buy</button><br>
+      <h3 id="confirm"></h3>
     </div>
 
+    <br>
+    <br>
     <footer class="main-footer">
       <section class="footer-columns">
         <div class="footer-column">
@@ -218,16 +204,8 @@
       </section>
     </footer>
 
-    <!--    <script>
-       fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-  });
-</script> -->
-    <script src="assets/javascript/javascript.js"></script>
+
+    <script src="assets/javascript/giftCard.js"></script>
     <script
       src="https://kit.fontawesome.com/77f9a0ac97.js"
       crossorigin="anonymous"
