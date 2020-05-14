@@ -125,8 +125,8 @@ get.onclick = async () => {
         </div>
         <div class="card-text-container">
         <h3>${meal.strMeal}</h3>
-        <p>${meal.strTags}</p>
-        <a href="${meal.strYoutube}" target="_blank"><button type="button" id="myButton" >YouTube</button></a>
+       
+        <a href="${meal.strYoutube}" target="_blank"><button type="button" id="myButton-youtube" ><i class="fab fa-youtube fa-2x"></i></button></a>
         
       
     </div>
@@ -137,3 +137,4 @@ get.onclick = async () => {
     console.log("getCustomers: ERROR", err);
   }
 };
+{/* <p>${meal.strTags}</p> */}
