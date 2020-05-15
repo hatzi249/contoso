@@ -35,7 +35,7 @@
       .container {
         display: grid;
         grid-gap: 5px;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 900px));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 600px));
         width: auto;
         margin: 0 200px;
         
@@ -47,6 +47,7 @@
         border-style: solid;
         border-color: black;
         margin-right: 0px;
+       
       }
       .zone:focus {
         border-color: gray;
@@ -57,7 +58,7 @@
       }
       .HeaderA,
       .HeaderB {
-        width: 101px;
+        width: 104px;
         height: 20px;
         text-align: center;
         margin: 10px auto;
@@ -69,15 +70,18 @@
         flex-direction: column;
         font-weight: bold;
         font-size: 15px;
-        margin: 1% 40%;
+        margin: 4% 40%;
         place-content: center center;
       }
 .address select{
         width: 300px;
         height: 30px;
         border-radius: 10px;
+        border-width: 2px;
         padding: 2px;
         margin: 0px;
+        font-weight: bold;
+        font-size: 14px;
        
 }
       .address input {
@@ -149,19 +153,19 @@
       </nav>
     </header>
 
-    <h6 class="HeaderA">Select card</h6>
+   
     <br />
     <br />
     <div class="container">
       <div class="zone">
-        <a href="#"><img src="assets/img/download.jfif" alt="" /></a>
+        <a href="#"><img src="assets/img/presentkort.jpg" alt="" /></a>
       </div>
     </div>
 
     <div class="address">
       <label for="price">Select price:</label>
       <select class="select">
-        <option selected>Select price</option>
+        <option selected>150 kr</option>
         <option value="persons">250 kr</option>
         <option value="persons">500 kr</option>
         <option value="persons">1000 kr</option>
