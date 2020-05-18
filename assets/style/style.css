@@ -167,6 +167,8 @@ nav {
     left: 0px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    background-color: rgba(209, 209, 209, 0.849);
+
 }
 
 #category-input {
@@ -262,7 +264,7 @@ nav {
 }
 
 .meal-card-back {
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(202, 216, 231, 0.849);
     color: white;
     transform: rotateY(180deg);
     width: 101%;
