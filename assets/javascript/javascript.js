@@ -88,6 +88,9 @@ getMenu = async () => {
 };
 getMenu(); */
 
+const cardHolder = document.getElementById("cardHolder");
+
+
 async function getFood(url) {
     const res = await fetch(url);
 
@@ -115,7 +118,7 @@ async function bigFunction() {
     const data = await getFood(`https://www.themealdb.com/api/json/v1/1/categories.php`);
 
     for (let i = 0; i < data.categories.length; i++) {
-        slide-container.innerHTML += renderFood(data.categories[i])
+        cardHolder.innerHTML += renderFood(data.categories[i])
     }
       console.log(data.categories[0])
 
