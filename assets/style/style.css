@@ -157,6 +157,119 @@ nav {
   display: inline-flex;
 }
 
+        /* start of Johns CSS */
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#category-input {
+    align-content: center;
+    height: 30px;
+    width: 200px;
+}
+
+#food-button {
+    align-content: center;
+    height: 35px;
+    border-style: none;
+}
+
+.meal-desc {
+    overflow: hidden;
+    line-height: 1.2;
+    white-space: pre-line;
+    margin: 10px;
+    position: absolute;
+    font-size: small;
+    top: 50px;
+    left: 0px;
+    color: rgb(26, 24, 24);
+}
+
+.meal-category {
+    text-align: center;
+    font-size: x-large;
+    color: rgb(0, 0, 0);
+}
+
+#things {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    height: 90%;
+    width: 90%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    scrollbar-width: none;
+    overflow: scroll hidden;
+}
+
+.meal-card {
+    background-color: transparent;
+    perspective: 1000px;
+    height: 300px;
+    width: 250px;
+    margin: 10px 10px;
+    position: relative;
+    border-radius: 5px;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
+.meal-card-back::-webkit-scrollbar {
+    display: none;
+}
+.meal-card::-webkit-scrollbar {
+    display: none;
+}
+.meal-card-inner::-webkit-scrollbar {
+    display: none;
+}
+
+.meal-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 10px 10px 20px 0px darkgray;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.meal-card:hover .meal-card-inner {
+    transform: rotateY(180deg);
+}
+
+.meal-card-front, .meal-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.meal-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.meal-card-back {
+    background-color: rgb(160, 195, 229);
+    color: white;
+    transform: rotateY(180deg);
+    width: 101%;
+    height: 101%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
 /*
 .card {
   background-color: #ffffff;
