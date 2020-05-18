@@ -271,7 +271,8 @@ img {
     overflow-y: scroll;
 }
 
-/*
+/* --- */
+
 .card {
   background-color: #ffffff;
   position: relative;
@@ -384,8 +385,6 @@ img {
   margin: 7px;
   
 }
-
-*/
 
 .tooltip {
   position: relative;
