@@ -102,7 +102,7 @@ function renderFood(categories) {
     <div class="meal-card">
         <div class="meal-card-inner">
             <div class="meal-card-front">
-                <img src="${categories.strCategoryThumb}">
+                <img class ="flip-card-img" src="${categories.strCategoryThumb}">
             </div>
             <div class="meal-card-back">
                 <h2 class="meal-category"> ${categories.strCategory} </h2>
@@ -144,7 +144,7 @@ get.onclick = async () => {
       dish.innerHTML += `
           <div class="card-categories">
           <div class="tooltip">
-          <img
+          <img 
           class="image-categories"
           src="${meal.strMealThumb}"
           style="width: 100%;"
