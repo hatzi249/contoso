@@ -197,6 +197,7 @@ img {
     text-align: center;
     font-size: x-large;
     color: rgb(0, 0, 0);
+    padding: 10px 0 0 0;
 }
 
 #things {
@@ -261,7 +262,7 @@ img {
 }
 
 .meal-card-back {
-    background-color: rgb(160, 195, 229);
+    background-color: rgb(255, 255, 255);
     color: white;
     transform: rotateY(180deg);
     width: 101%;
