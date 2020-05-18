@@ -157,6 +157,7 @@ nav {
   display: inline-flex;
 }
 
+/*
 .card {
   background-color: #ffffff;
   position: relative;
@@ -245,7 +246,6 @@ nav {
   width: 240px;
   height: 360px;
   transition: all 0.3s ease-in-out;
-  /*  border: 1px solid rgb(231, 231, 231); */
   overflow: auto;
   scrollbar-width: none;
 }
@@ -253,10 +253,6 @@ nav {
 .card-categories::-webkit-scrollbar {
   display: none;
 }
-
-/* .card-categories:hover {
-  transform: scale(1.1, 1.1);
-} */
 
 .card-categories img {
   border-top-right-radius: 7px;
@@ -269,9 +265,14 @@ nav {
   text-align: center;
   padding: 8px;
 }
+
 .card-text-container > p {
   margin: 7px;
+  
 }
+
+*/
+
 .tooltip {
   position: relative;
   display: inline-block;
