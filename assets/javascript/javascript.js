@@ -172,7 +172,7 @@ get.onclick = async () => {
         </div> `;
     });
   } catch (err) {
-    dish.innerHTML = `Menu on the way.....!!!!!!`;
+    dish.innerHTML = `No Menu items found!`;
     console.log("getCustomers: ERROR", err);
   }
 };
