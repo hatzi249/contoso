@@ -29,6 +29,7 @@ function initMap() {
 }
 
 /*Categories*/
+/*
 
 const apiUrl = "https://www.themealdb.com/api/json/v1/1/categories.php";
 async function getCategory() {
@@ -85,7 +86,41 @@ getMenu = async () => {
     console.log("getCustomers: ERROR", err);
   }
 };
-getMenu();
+getMenu(); */
+
+async function getFood(url) {
+    const res = await fetch(url);
+
+    return res.json()
+}
+
+function renderFood(categories) {
+    return `
+    <div class="meal-card">
+        <div class="meal-card-inner">
+            <div class="meal-card-front">
+                <img src="${categories.strCategoryThumb}">
+            </div>
+            <div class="meal-card-back">
+                <h2 class="meal-category"> ${categories.strCategory} </h2>
+                <h3 class="meal-desc"> ${categories.strCategoryDescription} </h3>
+            </div>
+        </div>
+    </div>
+    `
+}
+
+async function bigFunction() {
+
+    const data = await getFood(`https://www.themealdb.com/api/json/v1/1/categories.php`);
+
+    for (let i = 0; i < data.categories.length; i++) {
+        card-holder.innerHTML += renderFood(data.categories[i])
+    }
+
+}
+
+bigFunction();
 
 /*Search*/
 
