@@ -115,8 +115,9 @@ async function bigFunction() {
     const data = await getFood(`https://www.themealdb.com/api/json/v1/1/categories.php`);
 
     for (let i = 0; i < data.categories.length; i++) {
-        card-holder.innerHTML += renderFood(data.categories[i])
+        slide-container.innerHTML += renderFood(data.categories[i])
     }
+      console.log(data.categories[0])
 
 }
 
